@@ -9,7 +9,6 @@ function App() {
   useEffect(() => {
     document.title = "Insurtent | Insurance content aggregator";
   }, []);
-
   return <Home></Home>;
 }
 
