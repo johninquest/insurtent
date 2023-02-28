@@ -1,6 +1,6 @@
 {
   "name": "insurtent",
-  "version": "0.02.27",
+  "version": "0.02.28",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
