@@ -18,7 +18,7 @@ const Home = () => {
         </div> */}
         <div
           style={{
-            margin: "1rem auto 1rem auto",
+            margin: "3rem auto 1rem auto",
             color: "#6667ab",
             fontWeight: "bold",
             letterSpacing: "0.1rem",
@@ -59,9 +59,26 @@ const Home = () => {
                 </a>
               </span>
             </li>
+            <li
+              style={{
+                margin: "1rem auto auto auto",
+                letterSpacing: "0.1rem",
+              }}
+            >
+              {/*  <span>&copy;</span> */}
+              <span>
+                <a
+                  href="https://www.britannica.com/topic/insurance/Historical-development-of-insurance"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Britannica
+                </a>
+              </span>
+            </li>
           </ul>
         </div>
-        <div style={{ marginTop: "13rem", fontSize: "0.8rem" }}>
+        <div style={{ marginTop: "8rem", fontSize: "0.8rem" }}>
           v{packageJson.version}
         </div>
       </header>
