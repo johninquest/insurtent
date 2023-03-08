@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
 import packageJson from "../../package.json";
 import ReactGA from "react-ga";
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Home = () => {
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
   });
+  let currentYear = new Date().getFullYear();
+  let openUrl = () => {
+    window.open("https://www.johnapps.de", "_blank").focus();
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -24,7 +27,7 @@ const Home = () => {
           The history of insurance
         </div>
         <div>
-          <ul>
+          <ul style={{ listStyleType: "none" }}>
             <li
               style={{
                 margin: "1rem auto auto auto",
@@ -33,7 +36,11 @@ const Home = () => {
             >
               {/*  <span>&copy;</span> */}
               <span>
-                <a href="https://www.investopedia.com/articles/08/history-of-insurance.asp">
+                <a
+                  href="https://www.investopedia.com/articles/08/history-of-insurance.asp"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Investopedia
                 </a>
               </span>
@@ -43,7 +50,11 @@ const Home = () => {
             >
               {/*  <span>&copy;</span> */}
               <span>
-                <a href="https://en.wikipedia.org/wiki/History_of_insurance">
+                <a
+                  href="https://en.wikipedia.org/wiki/History_of_insurance"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Wikipedia
                 </a>
               </span>
@@ -54,6 +65,24 @@ const Home = () => {
           v{packageJson.version}
         </div>
       </header>
+
+      <div
+        style={{
+          margin: "1rem",
+          fontSize: "0.5rem",
+          color: "#6667ab",
+          cursor: "pointer",
+          fontWeight: "bold",
+        }}
+        onClick={openUrl}
+      >
+        <span>&copy;</span>&nbsp;
+        <span style={{ textTransform: "uppercase", letterSpacing: "0.05rem" }}>
+          john apps
+        </span>
+        &nbsp;
+        <span>{currentYear}</span>
+      </div>
     </div>
   );
 };

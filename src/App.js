@@ -1,21 +1,18 @@
 import "./App.scss";
-import React, { useEffect } from "react";
+import React from "react";
 import ReactGA from "react-ga";
 import Home from "./pages/Home";
-import NavButtons from "./components/NavButtons";
+// import NavBar from "./components/NavBar";
 const TRACKING_ID = "G-3K3BR7ZQ9K";
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
-  useEffect(() => {
-    document.title = "Insurtent | Your one-stop shop for insurance content";
-  }, []);
   // return <Home></Home>;
   return (
-    <div>
-      <NavButtons></NavButtons>
+    <>
+      {/*  <NavBar></NavBar> */}
       <Home></Home>
-    </div>
+    </>
   );
 }
 
